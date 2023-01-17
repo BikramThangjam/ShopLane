@@ -87,7 +87,7 @@ const Cart = () => {
                                             <span className="amount fs-7">$5</span>
                                         </div>
                                         <div className="subtotal ">
-                                            <h3 className="lead fs-7">Order Total</h3>
+                                            <h3 className="lead fs-7 fw-bold">Order Total</h3>
                                             <span className="amount fs-7">${parseFloat((items.totalPrice + 5 + 5).toFixed(2))}</span>
                                         </div>
                                 

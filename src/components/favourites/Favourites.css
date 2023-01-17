@@ -1,0 +1,12 @@
+.red{
+    color: red;
+}
+
+.continue-shopping a {
+    color: rgb(81, 10, 139);
+    text-decoration: none;
+  }
+  .continue-shopping a:hover{
+    color: rgb(25, 180, 10);
+  }
+  

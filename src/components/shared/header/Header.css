@@ -1,0 +1,68 @@
+.brand{
+    cursor: pointer;  
+}
+  
+  h5 {
+    /* margin: 20px; */
+    font-family: "Paytone One";
+    color: #202020;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+  }
+  
+  h5 span {
+    display: block;
+    margin: 11px 0 17px 0;
+    font-size: 45px;
+    line-height: 80px;
+    color: #f1ebe5;
+    text-shadow: 0 13.36px 8.896px #c4b59d,0 -2px 1px #fff;
+    letter-spacing: -4px;
+  }
+
+.nav-items{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.dropdown-menu{
+    z-index: 9999;
+    cursor: pointer;
+    background-image: linear-gradient(135deg, #fcb69f 0%, #e2d1c3 100%);
+}
+.dropdown-menu a{
+    transition: 0.1s;
+}
+.dropdown-menu a:hover{
+    color: white;
+    background-color: black;
+}
+
+.dropdown-toggle::after{
+    display: none;
+}
+
+.login-signup-nav{
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2px;
+    width: 160px;
+    height: 40px;
+    transition: 0.5s;
+}
+
+.login-signup-nav:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.fs-7{
+    font-size: 14px;
+}
+
+.nav-bg{
+    background-image: linear-gradient(to right, #fcb69f 0%, #fcb69f 100%);
+  }

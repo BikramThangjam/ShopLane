@@ -44,7 +44,11 @@
     display: none;
 }
 
+<<<<<<< HEAD
 .login-signup-nav{
+=======
+.login-signup-nav2{
+>>>>>>> 62213b54464cfcf7c2f85d9581b91d2f14f003e3
     border-radius: 5px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: flex;
@@ -65,4 +69,24 @@
 
 .nav-bg{
     background-image: linear-gradient(to right, #fcb69f 0%, #fcb69f 100%);
+<<<<<<< HEAD
   }
+=======
+  }
+
+.menu-btn{
+    background-image: linear-gradient(to right, #f7ceb6 0%, #fcb69f 100%);
+}
+
+@media (max-width:991px){
+    .login-signup-nav{
+        display: none;
+    }
+}
+
+@media (min-width:992px){
+    .menu-btn{
+        display: none;
+    }
+}
+>>>>>>> 62213b54464cfcf7c2f85d9581b91d2f14f003e3

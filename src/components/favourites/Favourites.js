@@ -32,7 +32,11 @@ const Favourites = () => {
             {
                 favs.length > 0 ? (
                     <div>
+<<<<<<< HEAD
                         <div className="text-center display-6 pt-4 pb-4 shadow-sm ">Your Favourites</div>
+=======
+                        
+>>>>>>> 62213b54464cfcf7c2f85d9581b91d2f14f003e3
                         <div className="row pt-5 pe-4 ps-4">
                             {
                                 favs.map((item, i) =>

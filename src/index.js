@@ -1,27 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Home from './pages/home/Home';
-import Header from './components/shared/header/Header';
-import Favourites from './components/favourites/Favourites';
-import Cart from './pages/cart/Cart';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Provider } from 'react-redux';
-import store from './store';
+import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/favourites" element={<Favourites />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </BrowserRouter>
-    </Provider>
+    <App/>
   </React.StrictMode>
 );
 

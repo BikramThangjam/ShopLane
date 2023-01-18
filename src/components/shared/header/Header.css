@@ -27,28 +27,35 @@
     width: 100%;
 }
 
-.dropdown-menu{
+.offcanvas-body{
+    padding: 0;
+}
+.navbar-nav li a,.navbar-nav li>span, .cat-menu span{
+    padding: 8px 16px;
+}
+.navbar-nav li a:hover,.navbar-nav li>span:hover, .cat-menu span:hover{
+    background-color: rgb(248, 170, 147);
+}
+
+.cat-menu{
+    margin-left: 16px;
     z-index: 9999;
     cursor: pointer;
     background-image: linear-gradient(135deg, #fcb69f 0%, #e2d1c3 100%);
 }
-.dropdown-menu a{
-    transition: 0.1s;
+.ls-dropdown{
+    background-image: linear-gradient(135deg, #fcb69f 0%, #e2d1c3 100%);
+    z-index: 9999;
 }
-.dropdown-menu a:hover{
-    color: white;
-    background-color: black;
+.dropdown-menu span{
+    transition: 0.1s;
 }
 
 .dropdown-toggle::after{
     display: none;
 }
 
-<<<<<<< HEAD
-.login-signup-nav{
-=======
 .login-signup-nav2{
->>>>>>> 62213b54464cfcf7c2f85d9581b91d2f14f003e3
     border-radius: 5px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: flex;
@@ -60,7 +67,7 @@
     transition: 0.5s;
 }
 
-.login-signup-nav:hover{
+.login-signup-nav2:hover{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .fs-7{
@@ -69,9 +76,6 @@
 
 .nav-bg{
     background-image: linear-gradient(to right, #fcb69f 0%, #fcb69f 100%);
-<<<<<<< HEAD
-  }
-=======
   }
 
 .menu-btn{
@@ -89,4 +93,3 @@
         display: none;
     }
 }
->>>>>>> 62213b54464cfcf7c2f85d9581b91d2f14f003e3

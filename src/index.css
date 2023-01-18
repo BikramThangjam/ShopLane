@@ -1,0 +1,10 @@
+*{
+  font-family: 'Sen', sans-serif;
+}
+html{
+  height: 100%;
+}
+.set-bg{
+  background-image: linear-gradient(to right, #fcb69f 0%, #fcb69f 100%);
+  height: 100%;
+}

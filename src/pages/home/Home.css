@@ -1,0 +1,10 @@
+
+.category-main{
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+
+@media (max-width:991px){
+  .category-main{
+    display: none;
+  }
+}

@@ -14,11 +14,13 @@
     
 }
 
+.img-link{
+  width: 60%;
+  margin: auto;
+}
 
 .card-img{
     height:230px;
-    width: 60%;
-    margin: auto;
 }
 
 /*card-btn 1 style*/
@@ -93,5 +95,8 @@
     color:rgba(250, 250, 5, 0.877);
 }
 
+.img-link{
+  cursor: pointer;
+}
 
 

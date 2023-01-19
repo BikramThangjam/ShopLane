@@ -23,10 +23,10 @@ const Header = () => {
                         <div className="offcanvas-body">
                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li className="nav-item">
-                                    <Link className="nav-link active" aria-current="page" to="/login">Login</Link>
+                                    <Link className="nav-link active" aria-current="page" to="/signin">Sign in</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link active" aria-current="page" to="/signup">Signup</Link>
+                                    <Link className="nav-link active" aria-current="page" to="/signup">Sign up</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link active" aria-current="page" to="/cart">Cart</Link>
@@ -69,7 +69,7 @@ const Header = () => {
                                         </svg>
                                     </div>
                                     <ul className="dropdown-menu  ls-dropdown">
-                                        <li><Link className="dropdown-item" to="/login">Login</Link></li>
+                                        <li><Link className="dropdown-item" to="/signin">Sign in</Link></li>
                                         <li><Link className="dropdown-item" to="/signup">Sign Up</Link></li>
                                         <li><Link className="dropdown-item" to="/cart">Cart</Link></li>
                                         <li><Link className="dropdown-item" to="/favourites">Favourites</Link></li>

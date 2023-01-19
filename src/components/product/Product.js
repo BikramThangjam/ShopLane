@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToFav } from "../../reducers/favReducer";
 import { add,remove} from "../../reducers/cartReducer";
 import { cartSelector } from "../../reducers/cartReducer";
+import { Link } from "react-router-dom";
 
 const Product = (props) => {
     const product = props.item;
@@ -30,8 +31,9 @@ const Product = (props) => {
             <div className="d-flex justify-content-end">
                 <i className="fa fa-heart heart-icon" onClick={(e) => handleFav(e, product)}></i>
             </div>
-            <img src={product.image} className="card-img-top card-img" alt={product.title} />
-
+            <Link className="img-link" to={`/products/${product.id}`}>
+                <img src={product.image} className="card-img-top card-img" alt={product.title} />
+            </Link>
             <div className="card-body pb-1">
                 <h4 className="card-title lead fs-5">{product.title}</h4>
                 <p className="lead fs-6 ">

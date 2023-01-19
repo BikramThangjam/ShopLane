@@ -3,7 +3,7 @@ import './Home.css';
 import Products from "../../components/products/Products"
 import { useState, useEffect } from 'react';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
-
+import 'react-loading-skeleton/dist/skeleton.css';
 
 function Home() {
 
@@ -39,18 +39,18 @@ function Home() {
 
   const Loading = () => {
     return (
-      <div>
+      <div className='row pt-5 ps-4 pe-4'>
         <SkeletonTheme baseColor="#ffcfcc" highlightColor="#ebd0ce">
-          <div className="col-md-3">
+          <div className="col-12 col-xl-3 col-md-4 col-sm-6 mb-3 ">
             <Skeleton height={494} width={339} />
           </div>
-          <div className="col-md-3">
+          <div className="col-12 col-xl-3 col-md-4 col-sm-6 mb-3 ">
             <Skeleton height={494} width={339} />
           </div>
-          <div className="col-md-3">
+          <div className="col-12 col-xl-3 col-md-4 col-sm-6 mb-3 ">
             <Skeleton height={494} width={339} />
           </div>
-          <div className="col-md-3">
+          <div className="col-12 col-xl-3 col-md-4 col-sm-6 mb-3 ">
             <Skeleton height={494} width={339} />
           </div>        
         </SkeletonTheme>

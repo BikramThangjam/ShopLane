@@ -23,19 +23,19 @@ const Header = () => {
                         <div className="offcanvas-body">
                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li className="nav-item">
-                                    <Link className="nav-link active" aria-current="page" to="/signin">Sign in</Link>
+                                    <Link className="nav-link active no-underline" aria-current="page" to="/signin">Sign in</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link active" aria-current="page" to="/signup">Sign up</Link>
+                                    <Link className="nav-link active no-underline" aria-current="page" to="/signup">Sign up</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link active" aria-current="page" to="/cart">Cart</Link>
+                                    <Link className="nav-link active no-underline" aria-current="page" to="/cart">Cart</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link active" aria-current="page" to="/favourites">Favourites</Link>
+                                    <Link className="nav-link active no-underline" aria-current="page" to="/favourites">Favourites</Link>
                                 </li>
                                 
-                                <li className="nav-item dropdown">
+                                <li className="nav-item dropdown"> 
                                     <span className="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Categories
                                     </span>
@@ -69,10 +69,33 @@ const Header = () => {
                                         </svg>
                                     </div>
                                     <ul className="dropdown-menu  ls-dropdown">
-                                        <li><Link className="dropdown-item" to="/signin">Sign in</Link></li>
-                                        <li><Link className="dropdown-item" to="/signup">Sign Up</Link></li>
-                                        <li><Link className="dropdown-item" to="/cart">Cart</Link></li>
-                                        <li><Link className="dropdown-item" to="/favourites">Favourites</Link></li>
+                                        <li>
+                                            <Link className="dropdown-item no-underline" to="/signin">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+                                                <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                                                </svg>
+                                                Sign in
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link className="dropdown-item no-underline" to="/signup">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                                                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                                    <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                                                    </svg>
+                                                Sign Up
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link className="dropdown-item no-underline" to="/cart">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                                </svg>
+                                                Cart
+                                            </Link>
+                                        </li>
+                                        <li><Link className="dropdown-item no-underline" to="/favourites">Favourites</Link></li>
                                     </ul>
                                 </li>
                                 <li className="nav-item me-4 position-relative pt-2 pe-1">

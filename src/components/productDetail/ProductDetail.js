@@ -38,7 +38,7 @@ const ProductDetail = () => {
     const Loading = () => {
         return (
 
-            <SkeletonTheme baseColor="#b3b4b5" highlightColor="#c9ccd1">
+            <SkeletonTheme baseColor="#e6e6e6" highlightColor="#ffffff">
                 <div className="col-md-6">
                     <Skeleton height={400} />
                 </div>

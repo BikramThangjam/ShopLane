@@ -36,10 +36,6 @@ const initialState = {
             }
         },
 
-        clearCart: (state)=>{
-            state.carts = [];
-        },
-
         getTotal: (state)=>{
 
             const {price, quantity} = state.carts.reduce((cartTotal,currentItem)=>{

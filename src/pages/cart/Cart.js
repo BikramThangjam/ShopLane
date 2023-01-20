@@ -3,7 +3,7 @@ import "./Cart.css";
 import CartItem from "../../components/CartItem/CartItem";
 import { useSelector } from "react-redux";
 import { cartSelector } from "../../reducers/cartReducer.js"
-import { clearCart, getTotal } from "../../reducers/cartReducer";
+import {getTotal } from "../../reducers/cartReducer";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
@@ -16,10 +16,6 @@ const Cart = () => {
     useEffect(() => {
         dispatch(getTotal());
     }, [items, dispatch])
-
-    const handleClearCart = () => {
-        dispatch(clearCart());
-    };
 
     return (
         <div>

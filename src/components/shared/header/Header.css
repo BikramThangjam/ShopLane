@@ -20,8 +20,11 @@
     letter-spacing: -4px;
   }
 
-.no-underline{
+.text-link:focus,.text-link:visited,.text-link:link,.text-link:active{
     text-decoration: none;
+}  
+.text-link:hover{
+    color: white !important;
 }
 
 .nav-items{
@@ -38,17 +41,18 @@
     padding: 8px 16px;
 }
 .navbar-nav li a:hover,.navbar-nav li>span:hover, .cat-menu span:hover{
-    background-color: rgb(248, 170, 147);
+    background-color: rgb(247, 150, 60);
+    color: white;
 }
 
 .cat-menu{
     margin-left: 16px;
     z-index: 9999;
     cursor: pointer;
-    background-image: linear-gradient(135deg, #fcb69f 0%, #e2d1c3 100%);
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,209,67,1) 0%, rgba(255,145,83,1) 90% );
 }
 .ls-dropdown{
-    background-image: linear-gradient(135deg, #fcb69f 0%, #e2d1c3 100%);
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(245, 173, 80) 0%, rgb(245, 151, 97) 90% );
     z-index: 9999;
 }
 .dropdown-menu span{
@@ -79,11 +83,11 @@
 }
 
 .nav-bg{
-    background-image: linear-gradient(to right, #fcb69f 0%, #fcb69f 100%);
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,209,67,1) 0%, rgba(255,145,83,1) 90% );
   }
 
 .menu-btn{
-    background-image: linear-gradient(to right, #f7ceb6 0%, #fcb69f 100%);
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,209,67,1) 0%, rgba(255,145,83,1) 90% );
 }
 
 @media (max-width:991px){

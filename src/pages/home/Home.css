@@ -1,6 +1,6 @@
 
 .category-main{
-  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,209,67,1) 0%, rgba(255,145,83,1) 90% );
 }
 
 @media (max-width:991px){

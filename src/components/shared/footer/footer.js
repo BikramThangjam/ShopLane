@@ -14,7 +14,7 @@ const Footer = () => {
 
                         <div className="col-md-2 col-sm-2 col-xs-6">
                             <h6 className="text-uppercase font-weight-bold">
-                                <Link to="#!" className="text-white footer-link">About us</Link>
+                                <Link to="#" className="text-white footer-link">About us</Link>
                             </h6>
                         </div>
 
@@ -22,7 +22,7 @@ const Footer = () => {
 
                         <div className="col-md-2 ">
                             <h6 className="text-uppercase font-weight-bold">
-                                <Link to="#!" className="text-white footer-link">Products</Link>
+                                <Link to="#" className="text-white footer-link">Products</Link>
                             </h6>
                         </div>
 
@@ -30,7 +30,7 @@ const Footer = () => {
 
                         <div className="col-md-2 ">
                             <h6 className="text-uppercase font-weight-bold">
-                                <Link to="#!" className="text-white footer-link">Awards</Link>
+                                <Link to="#" className="text-white footer-link">Awards</Link>
                             </h6>
                         </div>
 
@@ -38,7 +38,7 @@ const Footer = () => {
 
                         <div className="col-md-2 ">
                             <h6 className="text-uppercase font-weight-bold">
-                                <Link to="#!" className="text-white footer-link">Help</Link>
+                                <Link to="#" className="text-white footer-link">Help</Link>
                             </h6>
                         </div>
 
@@ -46,7 +46,7 @@ const Footer = () => {
 
                         <div className="col-md-2">
                             <h6 className="text-uppercase font-weight-bold">
-                                <Link to="#!" className="text-white footer-link">Contact</Link>
+                                <Link to="#" className="text-white footer-link">Contact</Link>
                             </h6>
                         </div>
 
@@ -71,22 +71,22 @@ const Footer = () => {
 
 
                 <section className="text-center mb-5">
-                    <Link to="" className="text-color me-4">
+                    <Link to="#" className="text-color me-4">
                         <i className="fab fa-facebook-f"></i>
                     </Link>
-                    <Link to="" className="text-color me-4">
+                    <Link to="#" className="text-color me-4">
                         <i className="fab fa-twitter"></i>
                     </Link>
-                    <Link to="" className="text-color me-4">
+                    <Link to="#" className="text-color me-4">
                         <i className="fab fa-google"></i>
                     </Link>
-                    <Link to="" className="text-color me-4">
+                    <Link to="#" className="text-color me-4">
                         <i className="fab fa-instagram"></i>
                     </Link>
-                    <Link to="" className="text-color me-4">
+                    <Link to="#" className="text-color me-4">
                         <i className="fab fa-linkedin"></i>
                     </Link>
-                    <Link to="" className="text-color me-4">
+                    <Link to="#" className="text-color me-4">
                         <i className="fab fa-github"></i>
                     </Link>
                 </section>

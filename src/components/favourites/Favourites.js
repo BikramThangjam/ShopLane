@@ -41,7 +41,9 @@ const Favourites = () => {
                                             <div className="d-flex justify-content-end">
                                                 <i className="fa fa-heart heart-icon red" onClick={(e) => handleFav(e, item.id)}></i>
                                             </div>
-                                            <img src={item.image} className="card-img-top card-img" alt={item.title} />
+                                            <Link className="img-link" to={`/products/${item.id}`}>
+                                                <img src={item.image} className="card-img-top card-img" alt={item.title} />
+                                            </Link>
 
                                             <div className="card-body">
                                                 <h4 className="card-title lead fs-5">{item.title}</h4>

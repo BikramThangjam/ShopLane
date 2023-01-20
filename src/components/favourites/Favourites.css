@@ -9,4 +9,7 @@
   .continue-shopping a:hover{
     color: rgb(203, 37, 236);
   }
-  
+  .img-link{
+    width: 60%;
+    margin: auto;
+  }

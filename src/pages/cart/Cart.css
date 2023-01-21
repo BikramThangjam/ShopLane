@@ -2,8 +2,7 @@
     margin-bottom: 120px;
 }
 
-.carts-bg{
-    
+.carts-bg{   
   background-image: linear-gradient(90deg, #fffffffa 15%, #f8ab36 61%, #f7924f 99%);
 }
 .cart-container {
@@ -150,7 +149,9 @@
 @media (max-width: 665px) {
   
   /* Cart */
-  
+  .carts-bg{   
+    background-image: linear-gradient(90deg, #fffffffa 40%, #f5be6d 61%, #f88437 99%);
+  }
   .cart-container .titles {
     display: none;
   }

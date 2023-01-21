@@ -72,10 +72,10 @@ const ProductDetail = () => {
                 </div>
                 <div className="col-md-6 col-sm-12 col-xs-12">
                     <h4 className="text-uppercase text-black-50 mt-3">{product.category}</h4>
-                    <h1 className="display-5">{product.title}</h1>
+                    <h1 className="display-5 title">{product.title}</h1>
                     <p className="lead fw-bolder">
                         Rating {product.rating && product.rating.rate}
-                        <i className="fa fa-star "></i>
+                        <i className="fa fa-star star"></i>
                     </p>
                     <h3 className="display-6 fw-bold my-4">
                         ${product.price}

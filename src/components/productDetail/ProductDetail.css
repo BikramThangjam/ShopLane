@@ -83,6 +83,10 @@
   color: black;
 }
 
+.star{
+  color: rgb(255, 255, 0);
+}
+
   @media screen and (max-device-width: 360px) { 
     /* STYLES HERE */
     .product-container{
@@ -114,7 +118,11 @@
     
     .product-container{
         background-color: #ffffff;
-        background-image: linear-gradient(180deg, #fffffffa 38%, #f7af44 61%, #f8a83f 99%);
+        background-image: linear-gradient(180deg, #fffffffa 50%, #f7af44 61%, #f8a83f 99%);
+    }
+
+    .title{
+      font-size: 24px;
     }
     img {
         width:60vw;

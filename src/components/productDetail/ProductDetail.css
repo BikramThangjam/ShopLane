@@ -99,6 +99,15 @@
       .add-btn{
         margin-left: 0 !important;
       }
+      .removeCard-btn, .addCart-btn, .gotoCart-btn{
+        font-size: 8px;
+        padding: 10px 12px;
+        align-items: center;
+      }
+      .bi-cart3{
+        width: 8px ;
+        height: 8px;
+      }
 }
 
 @media screen and (min-device-width: 361px) and (max-device-width: 768px) { 
@@ -111,7 +120,16 @@
         width:60vw;
         height: auto;
       }
-      .add-btn{
+    .add-btn{
         margin-left: 0px !important;
-      }
+    }
+    .removeCard-btn, .addCart-btn, .gotoCart-btn{
+      font-size: 11px;
+      padding: 10px 12px;
+      align-items: center;
+    }
+    .bi-cart3{
+      width: 12px ;
+      height: 12px;
+    }
 }

@@ -7,25 +7,28 @@ import { useState } from "react";
 const SignupSchema = Yup.object().shape({
 
     username: Yup.string()
-    .required('Username cannot be blank!')
-    .matches(/^[A-Za-z][A-Za-z0-9_]+$/, "Invalid username.")
-    .min(3,'Must be atleast 3 characters long.')
-    .max(25,'Username too long!'),
+            .required('Username cannot be blank!')
+            .matches(/^[A-Za-z][A-Za-z0-9_]+$/, "Invalid username.")
+            .min(3,'Must be atleast 3 characters long.')
+            .max(25,'Username too long!'),
 
     email: Yup.string()
-    .email()
-    .required('Email cannot be blank!'),
+            .email()
+            .required('Email cannot be blank!'),
   
     password: Yup.string()
-    .required('Password cannot be blank!')
-    .matches(
-        /^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/,
-        "Password must contain at least 8 characters, one uppercase, one number and one special case character."
-      )
-    .max(12,'Password too long!'),
+            .required('Password cannot be blank!')
+            .matches(
+                /^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/,
+                "Password must contain at least 8 characters, one uppercase, one number and one special case character."
+            )
+            .max(12,'Password too long!'),
 
     confirmPassword: Yup.string()
-    .oneOf([Yup.ref('password'), null], 'Passwords do not match')
+            .oneOf([Yup.ref('password'), null], 'Passwords do not match'),
+
+    isChecked: Yup.bool()
+            .oneOf([true], 'You need to accept the terms and conditions'),
 
   });
 
@@ -35,7 +38,8 @@ const Signup = ()=>{
         username: "",
         email: "",
         password: "",
-        confirmPassword: ""
+        confirmPassword: "",
+        isChecked: false
       })
 
       const handleFormSubmit = async (elements) => {
@@ -94,11 +98,15 @@ const Signup = ()=>{
                                         </div>
                                         <div className="error ms-3">{errors.confirmPassword && touched.confirmPassword ? errors.confirmPassword : null}</div>
                                     </div>
-                                    
-                                   <div className="form__field">
-                                        <input id="signup_checkbox" type="checkbox" name="signup_checkbox" className="me-2" value="true"/>
-                                        <span>I agree to the terms & conditions</span>
+                                    <div>
+                                        <div className="form__field">
+                                            <Field type="checkbox" name="isChecked" className="me-2"/>
+                                            <span>I agree to the terms & conditions</span>
+                                        </div>
+                                        {errors.isChecked && <div className="error ms-3">{errors.isChecked}</div>}
+                                        
                                     </div>
+                                   
                                     <div className="form__field">
                                         <Field type="submit" value="Sign Up"/>
                                     </div>

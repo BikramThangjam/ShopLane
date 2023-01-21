@@ -28,7 +28,7 @@ const SignupSchema = Yup.object().shape({
             .oneOf([Yup.ref('password'), null], 'Passwords do not match'),
 
     isChecked: Yup.bool()
-            .oneOf([true], 'You need to accept the terms and conditions'),
+            .oneOf([true], 'You need to accept the terms & conditions'),
 
   });
 

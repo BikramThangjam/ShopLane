@@ -122,9 +122,13 @@
       }
     .add-btn{
         margin-left: 0px !important;
-    }
-    .removeCard-btn, .addCart-btn, .gotoCart-btn{
+    } .addCart-btn, .gotoCart-btn{
       font-size: 14px;
+      padding: 14px 14px;
+      align-items: center;
+    }
+    .removeCard-btn{
+      font-size: 12px;
       padding: 14px 14px;
       align-items: center;
     }

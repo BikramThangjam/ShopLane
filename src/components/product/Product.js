@@ -4,11 +4,18 @@ import { addToFav } from "../../reducers/favReducer";
 import { add,remove} from "../../reducers/cartReducer";
 import { cartSelector } from "../../reducers/cartReducer";
 import { Link } from "react-router-dom";
+import StarRatings from "react-star-ratings";
+
 
 const Product = (props) => {
     const product = props.item;
     const carts = useSelector(cartSelector).carts;
     const dispatch = useDispatch();
+
+    // Star rating
+    let countStar= product.rating.rate; 
+    const starPercentage = `${(countStar / 5) * 100}%` ;
+    //console.log(starPercentage);
 
     const itemIndex = carts.findIndex((item) => item.id === product.id);
 
@@ -36,11 +43,10 @@ const Product = (props) => {
             </Link>
             <div className="card-body pb-1">
                 <h4 className="card-title lead fs-5">{product.title}</h4>
-                <p className="lead fs-6 ">
-                    Rating {product.rating && product.rating.rate}
-                    <i className="fa fa-star star-color"></i>
-                    <span className="ms-1 text-black-50">({product.rating.count})</span>
-                </p>
+                <div className="lead fw-bolder d-flex gap-2 align-items-center">
+                    <StarRatings rating={product.rating && product.rating.rate} starEmptyColor="grey" starRatedColor="yellow" numberOfStars={5} starDimension="15px" starSpacing="2px"/>
+                    <span className="number-rating fs-6"> ({product.rating && product.rating.rate})</span>
+                </div>
                 <p className="fs-3 mb-0">${product.price}</p>
             </div>
 

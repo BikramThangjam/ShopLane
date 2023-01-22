@@ -8,24 +8,29 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import {useSelector, useDispatch } from "react-redux";
 import { cartSelector } from "../../reducers/cartReducer";
 import { add,remove } from "../../reducers/cartReducer";
+import StarRatings from "react-star-ratings";
 const ProductDetail = () => {
 
     const { id } = useParams();
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [starPercentage, setStarPercentage] = useState(0);
     const dispatch = useDispatch();
     const carts = useSelector(cartSelector).carts;
-    useEffect(() => {
 
-        const getProduct = () => {
+    useEffect(() => {
+        const getProduct = async () => {
             setLoading(true);
-            fetch(`https://fakestoreapi.com/products/${id}`)
+            await fetch(`https://fakestoreapi.com/products/${id}`)
                 .then(res => res.json())
                 .then(json => {
                     setProduct(json);
-                    //console.log(json);
                     setLoading(false);
                 })
+            // // Star rating
+            // let countStar= product.rating.rate; 
+            // const starPercent = `${(countStar / 5) * 100}%` ;
+            // setStarPercentage(starPercent);        
 
         }
         getProduct();
@@ -65,6 +70,7 @@ const ProductDetail = () => {
     }
 
     const ShowProduct = () => {
+
         return (
             <>
                 <div className="p-div col-md-6 col-sm-12 col-xs-12 ">
@@ -73,10 +79,10 @@ const ProductDetail = () => {
                 <div className="col-md-6 col-sm-12 col-xs-12">
                     <h4 className="text-uppercase text-black-50 mt-3">{product.category}</h4>
                     <h1 className="display-5 title">{product.title}</h1>
-                    <p className="lead fw-bolder">
-                        Rating {product.rating && product.rating.rate}
-                        <i className="fa fa-star star"></i>
-                    </p>
+                    <div className="lead fw-bolder d-flex gap-2 align-items-center">
+                        <StarRatings rating={product.rating && product.rating.rate} starEmptyColor="grey" starRatedColor="yellow" numberOfStars={5} starDimension="20px" starSpacing="2px"/>
+                        <span className="number-rating"> ({product.rating && product.rating.rate})</span>
+                    </div>
                     <h3 className="display-6 fw-bold my-4">
                         ${product.price}
                     </h3>

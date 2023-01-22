@@ -10,14 +10,17 @@ import ResetPassword from './pages/resetPassword/ResetPassword';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from 'react-redux';
 import store from './store';
-
+import { useState } from 'react';
 const App = () => {
+
+    const [catProduct,setCatProduct] = useState([]);
+    const [catName, setCatName] = useState();
     return (
         <Provider store={store}>
             <BrowserRouter>
-                <Header />
+                <Header getFilteredProducts = {setCatProduct} getCatName = {setCatName}/>
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Home catProduct={catProduct} catName={catName}/>} />
                     <Route path="/products/:id" element={<ProductDetail/>} />
                     <Route path="/favourites" element={<Favourites />} />
                     <Route path="/cart" element={<Cart />} />

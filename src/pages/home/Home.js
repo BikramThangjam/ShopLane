@@ -5,12 +5,13 @@ import { useState, useEffect } from 'react';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
-function Home() {
+function Home({catProduct,catName}) {
 
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
+
 
   useEffect(() => {
 
@@ -37,6 +38,11 @@ function Home() {
 
   }, [])
 
+  useEffect(()=>{
+    setFilter(catProduct);
+    console.log("home rendering...");
+  },[catName])
+
   const Loading = () => {
     return (
       <div className='row pt-5 ps-4 pe-4'>
@@ -62,7 +68,9 @@ function Home() {
  
     fetch(`https://fakestoreapi.com/products/category/${cat}`)
             .then(res=>res.json())
-            .then(json=>setFilter(json))
+            .then(json=>{
+              setFilter(json);
+            })
 
   }
 
@@ -81,7 +89,7 @@ function Home() {
             Sorry! No Products to show
           </div>
         ) : (
-          loading ? <Loading /> : <Products items={filter.length > 0 ? filter : data} />
+          loading ? <Loading /> : <Products items={filter.length > 0 ? filter : data} categoryName={catName}/>
         )
       }
 

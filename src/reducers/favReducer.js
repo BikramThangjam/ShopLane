@@ -14,7 +14,8 @@ const favSlice = createSlice({
             // console.log("action.payload.id ", action.payload.id);
             // console.log("action.payload ", action.payload);
             if(itemIndex >=0){
-                console.log("This product already added to favourites")
+                const itemId = action.payload.id;
+                state.favs = state.favs.filter((item)=> item.id !== itemId);
             }
             else{
                 const tempProduct = {...action.payload};

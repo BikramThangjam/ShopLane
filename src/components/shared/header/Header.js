@@ -2,16 +2,47 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import { cartSelector } from "../../../reducers/cartReducer";
 import { useSelector } from "react-redux";
+import { useState,useEffect } from "react";
 
-const Header = () => {
-
+const Header = ({getFilteredProducts,getCatName}) => {
+    const [data, setData] = useState([]);
     const cartsCount = useSelector(cartSelector).carts.length;
+
+    useEffect(() => {
+
+        const getProducts = () => {
+          fetch('https://fakestoreapi.com/products')
+            .then(res => res.json())
+            .then(json => {
+              setData(json);
+            })
+        }
+    
+        getProducts();
+    
+      }, [])
+
+      const getAllProducts = (items)=>{
+        getCatName("New Arrivals");
+        getFilteredProducts(items);
+        
+      }
+
+      const productFilter = (cat) => {
+ 
+        fetch(`https://fakestoreapi.com/products/category/${cat}`)
+            .then(res=>res.json())
+            .then(json=>{
+                getCatName(cat);
+                getFilteredProducts(json);               
+            }) 
+      }
 
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary shadow-sm p-3 bg-body-tertiary rounded nav-bg pt-4 pb-4 ">
                 <div className="container-fluid">
-                    <Link className="text-decoration-none brand" to="/"><h5><span>SHOPLANE</span></h5></Link>
+                    <Link className="text-decoration-none brand" to="/" onClick={()=> getAllProducts(data)}><h5><span>SHOPLANE</span></h5></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -62,11 +93,11 @@ const Header = () => {
                                     Categories
                                     </span>
                                     <ul className="dropdown-menu cat-menu">
-                                        <li><span className="dropdown-item">All</span></li>
-                                        <li><span className="dropdown-item">Men's Clothing</span></li>
-                                        <li><span className="dropdown-item">Women's Clothing</span></li>
-                                        <li><span className="dropdown-item">Jewelery</span></li>
-                                        <li><span className="dropdown-item">Electronics</span></li>
+                                        <li><span className="dropdown-item" onClick={() => getAllProducts(data)}>All</span></li>
+                                        <li><span className="dropdown-item" onClick={() => productFilter("men's clothing")}>Men's Clothing</span></li>
+                                        <li><span className="dropdown-item" onClick={() => productFilter("women's clothing")}>Women's Clothing</span></li>
+                                        <li><span className="dropdown-item" onClick={() => productFilter("jewelery")}>Jewelery</span></li>
+                                        <li><span className="dropdown-item" onClick={() => productFilter("electronics")}>Electronics</span></li>
                                     </ul>
                                 </li>
                             </ul>

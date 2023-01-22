@@ -1,12 +1,12 @@
 import "./Product.css";
 import { useDispatch, useSelector } from "react-redux";
-import { addToFav,removeFromFav } from "../../reducers/favReducer";
+import { addToFav } from "../../reducers/favReducer";
 import { add,remove} from "../../reducers/cartReducer";
 import { cartSelector } from "../../reducers/cartReducer";
 import { favSelector } from "../../reducers/favReducer";
 import { Link } from "react-router-dom";
 import StarRatings from "react-star-ratings";
-import { useState } from "react";
+
 
 
 const Product = (props) => {

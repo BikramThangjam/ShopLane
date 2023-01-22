@@ -14,7 +14,6 @@ const ProductDetail = () => {
     const { id } = useParams();
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [starPercentage, setStarPercentage] = useState(0);
     const dispatch = useDispatch();
     const carts = useSelector(cartSelector).carts;
 

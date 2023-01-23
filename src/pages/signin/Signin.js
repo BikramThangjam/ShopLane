@@ -29,7 +29,7 @@ const Signin = () => {
         password: "",
       })
     
-      const handleFormSubmit = async (elements) => {
+      const handleFormSubmit = (elements) => {
         alert("Sign in Successfull!")
       }
 

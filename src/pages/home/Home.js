@@ -40,7 +40,6 @@ function Home({catProduct,catName}) {
 
   useEffect(()=>{
     setFilter(catProduct);
-    // console.log("home rendering...");
   },[catProduct,catName])
 
   const Loading = () => {

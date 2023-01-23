@@ -38,7 +38,6 @@ const Header = ({getFilteredProducts,getCatName}) => {
             }) 
       }
 
-
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary shadow-sm p-3 bg-body-tertiary rounded nav-bg pt-4 pb-4 ">
@@ -50,7 +49,7 @@ const Header = ({getFilteredProducts,getCatName}) => {
                     <div className="offcanvas offcanvas-start menu-btn" data-bs-scroll="true" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                         <div className="offcanvas-header">
                         <h5 className="offcanvas-title" id="offcanvasNavbarLabel"><span>SHOPLANE</span></h5>
-                        <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <button type="button" className="btn-close me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div className="offcanvas-body">
                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">

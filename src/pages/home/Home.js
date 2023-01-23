@@ -65,11 +65,12 @@ function Home({catProduct,catName}) {
   }
 
   const productFilter = (cat) => {
- 
+    setLoading(true);
     fetch(`https://fakestoreapi.com/products/category/${cat}`)
             .then(res=>res.json())
             .then(json=>{
               setFilter(json);
+              setLoading(false);
             })
 
   }

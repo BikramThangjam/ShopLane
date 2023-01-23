@@ -13,7 +13,7 @@ const ResetPasswordSchema = Yup.object().shape({
     .max(12,'Password too long!'),
 
     confirm_password: Yup.string()
-    .oneOf([Yup.ref('new_password'), null], 'Passwords does not match')
+    .oneOf([Yup.ref('new_password'), null], 'Password does not match')
 
   });
 

@@ -25,7 +25,7 @@ const SignupSchema = Yup.object().shape({
             .max(12,'Password too long!'),
 
     confirmPassword: Yup.string()
-            .oneOf([Yup.ref('password'), null], 'Passwords do not match'),
+            .oneOf([Yup.ref('password'), null], 'Passwords does not match'),
 
     isChecked: Yup.bool()
             .oneOf([true], 'You need to accept the terms & conditions'),

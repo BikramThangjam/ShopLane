@@ -25,11 +25,7 @@ const ProductDetail = () => {
                 .then(json => {
                     setProduct(json);
                     setLoading(false);
-                })
-            // // Star rating
-            // let countStar= product.rating.rate; 
-            // const starPercent = `${(countStar / 5) * 100}%` ;
-            // setStarPercentage(starPercent);        
+                })    
 
         }
         getProduct();
@@ -79,7 +75,7 @@ const ProductDetail = () => {
                     <h4 className="text-uppercase text-black-50 mt-3">{product.category}</h4>
                     <h1 className="display-5 title">{product.title}</h1>
                     <div className="lead fw-bolder d-flex gap-2 align-items-center">
-                        <StarRatings rating={product.rating && product.rating.rate} starEmptyColor="grey" starRatedColor="yellow" numberOfStars={5} starDimension="20px" starSpacing="2px"/>
+                        <StarRatings rating={product.rating && product.rating.rate} starEmptyColor="grey" starRatedColor="orange" numberOfStars={5} starDimension="20px" starSpacing="2px"/>
                         <span className="number-rating"> ({product.rating && product.rating.rate})</span>
                     </div>
                     <h3 className="display-6 fw-bold my-4">

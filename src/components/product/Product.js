@@ -47,7 +47,7 @@ const Product = (props) => {
                 <div className="card-body pb-1">
                     <h4 className="card-title lead fs-5">{product.title}</h4>
                     <div className="lead fw-bolder d-flex gap-2 align-items-center">
-                        <StarRatings rating={product.rating && product.rating.rate} starEmptyColor="grey" starRatedColor="yellow" numberOfStars={5} starDimension="15px" starSpacing="2px"/>
+                        <StarRatings rating={product.rating && product.rating.rate} starEmptyColor="grey" starRatedColor="orange" numberOfStars={5} starDimension="15px" starSpacing="2px"/>
                         <span className="number-rating fs-6"> ({product.rating && product.rating.rate})</span>
                     </div>
                     <p className="fs-3 mb-0">${product.price}</p>

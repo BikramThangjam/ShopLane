@@ -38,6 +38,7 @@ const Header = ({getFilteredProducts,getCatName}) => {
             }) 
       }
 
+
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary shadow-sm p-3 bg-body-tertiary rounded nav-bg pt-4 pb-4 ">

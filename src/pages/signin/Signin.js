@@ -25,10 +25,8 @@ const SigninSchema = Yup.object().shape({
 const Signin = () => {
 
     const [initialFormValues] = useState({
-        firstname: "",
-        lastname: "",
-        useremail: "",
-        userpassword: ""
+        username: "",
+        password: "",
       })
     
       const handleFormSubmit = async (elements) => {

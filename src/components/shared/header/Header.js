@@ -3,7 +3,7 @@ import "./Header.css";
 import { cartSelector } from "../../../reducers/cartReducer";
 import { useSelector } from "react-redux";
 import { useState,useEffect } from "react";
-
+import $ from 'jquery';
 const Header = ({getFilteredProducts,getCatName}) => {
     const [data, setData] = useState([]);
     const cartsCount = useSelector(cartSelector).carts.length;
@@ -38,6 +38,16 @@ const Header = ({getFilteredProducts,getCatName}) => {
             }) 
       }
 
+      $( document ).ready(function() {
+   
+        $(' .offcanvas-body-ul a, .cat-menu .dropdown-item').click(function(){
+           
+            $('.navbar .offcanvas').removeClass("show");
+            $('div.offcanvas-backdrop').remove();
+        });
+
+    });   
+
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary shadow-sm p-3 bg-body-tertiary rounded nav-bg pt-4 pb-4 ">
@@ -52,7 +62,7 @@ const Header = ({getFilteredProducts,getCatName}) => {
                         <button type="button" className="btn-close me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div className="offcanvas-body">
-                            <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <ul className="navbar-nav justify-content-end flex-grow-1 pe-3 offcanvas-body-ul">
                                 <li className="nav-item">
                                     <Link className="nav-link active text-link d-flex align-items-center gap-1" aria-current="page" to="/signin">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
@@ -88,8 +98,8 @@ const Header = ({getFilteredProducts,getCatName}) => {
                                     </Link>
                                 </li>
                                 
-                                <li className="nav-item dropdown"> 
-                                    <span className="nav-link active dropdown-toggle cat-nav" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <li className="nav-item dropdown cat-nav-li"> 
+                                    <span className="nav-link active dropdown-toggle cat-nav" data-bs-toggle="dropdown" aria-expanded="false">
                                     Categories
                                     </span>
                                     <ul className="dropdown-menu cat-menu">

@@ -81,8 +81,8 @@ function Home({catProduct,catName}) {
   //Keeping button active clicked on another button
   $(document).ready(function(){
     $('.category-btn').click(function(){
-      $('.category-btn').removeClass('active');
-      $(this).addClass('active');
+      $('.category-btn').removeClass('active-btn');
+      $(this).addClass('active-btn');
     });
   });
 

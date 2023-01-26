@@ -4,6 +4,7 @@ import Products from "../../components/products/Products"
 import { useState, useEffect } from 'react';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import $ from "jquery";
 
 function Home({catProduct,catName}) {
 
@@ -42,6 +43,9 @@ function Home({catProduct,catName}) {
     setFilter(catProduct);
   },[catProduct,catName])
 
+
+
+
   const Loading = () => {
     return (
       <div className='row pt-5 ps-4 pe-4'>
@@ -74,14 +78,23 @@ function Home({catProduct,catName}) {
 
   }
 
+  //Keeping button active clicked on another button
+  $(document).ready(function(){
+    $('.category-btn').click(function(){
+      $('.category-btn').removeClass('active');
+      $(this).addClass('active');
+    });
+  });
+
+
   return (
     <div>
       <div className="sticky-top mt-1 pt-4 pb-4 shadow-sm category-main d-flex justify-content-center gap-3">
-        <button type="button" className="btn btn-outline-dark" onClick={() => { setFilter(data) }}>All</button>
-        <button type="button" className="btn btn-outline-dark" onClick={() => productFilter("men's clothing")}>Men's Clothing</button>
-        <button type="button" className="btn btn-outline-dark" onClick={() => productFilter("women's clothing")}>Women's Clothing</button>
-        <button type="button" className="btn btn-outline-dark" onClick={() => productFilter("jewelery")}>Jewelery</button>
-        <button type="button" className="btn btn-outline-dark" onClick={() => productFilter("electronics")}>Electronics</button>
+        <button type="button" className="btn btn-outline-dark category-btn" onClick={() => { setFilter(data) }}>All</button>
+        <button type="button" className="btn btn-outline-dark category-btn" onClick={() => productFilter("men's clothing")}>Men's Clothing</button>
+        <button type="button" className="btn btn-outline-dark category-btn" onClick={() => productFilter("women's clothing")}>Women's Clothing</button>
+        <button type="button" className="btn btn-outline-dark category-btn" onClick={() => productFilter("jewelery")}>Jewelery</button>
+        <button type="button" className="btn btn-outline-dark category-btn" onClick={() => productFilter("electronics")}>Electronics</button>
       </div>
       {
         error ? (
